@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>CareConnect | Doctors</title>
 
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -18,7 +21,7 @@
     <nav>
         <a href="index.html">Home</a>
         <a href="doctors.html">Doctors</a>
-        <a href="appointment.html">Book Appointment</a>
+        <a href="appointment.html">Appointment</a>
         <a href="dashboard.html">Dashboard</a>
         <a href="login.html">Login</a>
     </nav>
@@ -30,16 +33,61 @@
 
     <h2>Find a Doctor</h2>
 
-    <p>Choose a doctor according to your healthcare needs.</p>
+    <p>Search and choose a doctor according to your healthcare needs.</p>
+
+    <br>
+
+    <!-- Search Doctor -->
+
+    <input
+        type="text"
+        id="doctorSearch"
+        placeholder="🔍 Search doctor..."
+    >
+
+    <br><br>
 
 
-    <div>
+    <!-- Specialty Filter -->
+
+    <select id="specialtyFilter">
+
+        <option value="all">All Specialties</option>
+
+        <option value="Cardiologist">
+            Cardiologist
+        </option>
+
+        <option value="Dermatologist">
+            Dermatologist
+        </option>
+
+        <option value="General Physician">
+            General Physician
+        </option>
+
+        <option value="Pediatrician">
+            Pediatrician
+        </option>
+
+    </select>
+
+    <br><br>
+
+
+    <!-- Doctor 1 -->
+
+    <div class="doctor-card">
 
         <h2>👨‍⚕️</h2>
 
-        <h3>Dr. Rahul Sharma</h3>
+        <h3 class="doctor-name">
+            Dr. Rahul Sharma
+        </h3>
 
-        <p>Cardiologist</p>
+        <p class="doctor-specialty">
+            Cardiologist
+        </p>
 
         <p>Experience: 10 Years</p>
 
@@ -52,13 +100,19 @@
     </div>
 
 
-    <div>
+    <!-- Doctor 2 -->
+
+    <div class="doctor-card">
 
         <h2>👩‍⚕️</h2>
 
-        <h3>Dr. Priya Mehta</h3>
+        <h3 class="doctor-name">
+            Dr. Priya Mehta
+        </h3>
 
-        <p>Dermatologist</p>
+        <p class="doctor-specialty">
+            Dermatologist
+        </p>
 
         <p>Experience: 8 Years</p>
 
@@ -71,13 +125,19 @@
     </div>
 
 
-    <div>
+    <!-- Doctor 3 -->
+
+    <div class="doctor-card">
 
         <h2>👨‍⚕️</h2>
 
-        <h3>Dr. Amit Patel</h3>
+        <h3 class="doctor-name">
+            Dr. Amit Patel
+        </h3>
 
-        <p>General Physician</p>
+        <p class="doctor-specialty">
+            General Physician
+        </p>
 
         <p>Experience: 12 Years</p>
 
@@ -90,13 +150,19 @@
     </div>
 
 
-    <div>
+    <!-- Doctor 4 -->
+
+    <div class="doctor-card">
 
         <h2>👩‍⚕️</h2>
 
-        <h3>Dr. Neha Verma</h3>
+        <h3 class="doctor-name">
+            Dr. Neha Verma
+        </h3>
 
-        <p>Pediatrician</p>
+        <p class="doctor-specialty">
+            Pediatrician
+        </p>
 
         <p>Experience: 9 Years</p>
 
@@ -113,10 +179,17 @@
 
 <footer>
 
-    <p>© 2026 CareConnect - Doctor Appointment System</p>
+    <p>
+        © 2026 CareConnect - Doctor Appointment System
+    </p>
 
 </footer>
 
 
+<script src="js/doctors.js"></script>
+
 </body>
+
 </html>
+
+       
