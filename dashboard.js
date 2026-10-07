@@ -1,30 +1,83 @@
-const appointment = localStorage.getItem("appointment");
+const appointmentData = localStorage.getItem("appointment");
+const userData = localStorage.getItem("user");
 
-if (appointment) {
 
-    const data = JSON.parse(appointment);
+// Load Patient Profile
+
+if (userData) {
+
+    const user = JSON.parse(userData);
 
     document.getElementById("patientName").textContent =
-        data.patientName;
+        user.name;
 
     document.getElementById("patientEmail").textContent =
-        data.email;
+        user.email;
+
+    document.getElementById("patientPhone").textContent =
+        user.phone;
+
+}
+
+
+// Load Appointment
+
+if (appointmentData) {
+
+    const appointment = JSON.parse(appointmentData);
 
     document.getElementById("doctor").textContent =
-        data.doctor;
+        appointment.doctor;
 
     document.getElementById("date").textContent =
-        data.date;
+        appointment.date;
 
     document.getElementById("time").textContent =
-        data.time;
+        appointment.time;
 
     document.getElementById("reason").textContent =
-        data.reason;
+        appointment.reason;
+
+    document.getElementById("appointmentCount").textContent = "1";
 
 } else {
 
-    document.getElementById("patientName").textContent =
-        "No appointment found";
+    document.getElementById("doctor").textContent =
+        "No appointment";
+
+    document.getElementById("date").textContent = "-";
+
+    document.getElementById("time").textContent = "-";
+
+    document.getElementById("reason").textContent = "-";
+
+    document.getElementById("appointmentCount").textContent = "0";
 
 }
+
+
+// Cancel Appointment
+
+const cancelButton =
+    document.getElementById("cancelAppointment");
+
+cancelButton.addEventListener("click", function() {
+
+    const appointment =
+        localStorage.getItem("appointment");
+
+    if (appointment) {
+
+        localStorage.removeItem("appointment");
+
+        alert("Appointment cancelled successfully!");
+
+        location.reload();
+
+    } else {
+
+        alert("No appointment available to cancel.");
+
+    }
+
+});
