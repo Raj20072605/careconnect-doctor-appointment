@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CareConnect | Login</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>CareConnect</h1>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="doctors.html">Doctors</a>
+
+        <a href="appointment.html">Appointment</a>
+
+        <a href="dashboard.html">Dashboard</a>
+
+        <a href="login.html">Login</a>
+
+    </nav>
+
+</header>
+
+
+<section>
+
+    <h2>Patient Login</h2>
+
+    <p>Login to manage your appointments.</p>
+
+
+    <form id="loginForm">
+
+        <label>Email Address</label>
+
+        <br>
+
+        <input
+            type="email"
+            id="loginEmail"
+            placeholder="Enter your email"
+            required
+        >
+
+        <br><br>
+
+
+        <label>Password</label>
+
+        <br>
+
+        <input
+            type="password"
+            id="loginPassword"
+            placeholder="Enter your password"
+            required
+        >
+
+        <br><br>
+
+
+        <button type="submit">
+            Login
+        </button>
+
+    </form>
+
+
+    <p id="loginMessage"></p>
+
+
+    <p>
+        New patient?
+        <a href="register.html">
+            Create an Account
+        </a>
+    </p>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 CareConnect - Doctor Appointment System
+    </p>
+
+</footer>
+
+
+<script src="js/login.js"></script>
+
+</body>
+
+</html>
