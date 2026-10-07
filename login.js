@@ -6,35 +6,58 @@ loginForm.addEventListener("submit", function(event) {
     event.preventDefault();
 
     const email =
-        document.getElementById("loginEmail").value;
+        document.getElementById("loginEmail").value.trim();
 
     const password =
         document.getElementById("loginPassword").value;
 
     const savedUser =
-        JSON.parse(localStorage.getItem("user"));
+        localStorage.getItem("user");
+
+
+    if (!savedUser) {
+
+        loginMessage.textContent =
+            "❌ No account found. Please register first.";
+
+        loginMessage.style.color = "red";
+
+        return;
+    }
+
+
+    const user = JSON.parse(savedUser);
+
 
     if (
-        savedUser &&
-        savedUser.email === email &&
-        savedUser.password === password
+        user.email === email &&
+        user.password === password
     ) {
 
         loginMessage.textContent =
-            "✅ Login successful!";
+            "✅ Login successful! Welcome " + user.name + "!";
 
         loginMessage.style.color = "green";
 
+
+        localStorage.setItem(
+            "loggedIn",
+            "true"
+        );
+
+
         setTimeout(function() {
 
-            window.location.href = "dashboard.html";
+            window.location.href =
+                "dashboard.html";
 
-        }, 1000);
+        }, 1200);
+
 
     } else {
 
         loginMessage.textContent =
-            "❌ Invalid email or password. Please register first.";
+            "❌ Incorrect email or password.";
 
         loginMessage.style.color = "red";
 
