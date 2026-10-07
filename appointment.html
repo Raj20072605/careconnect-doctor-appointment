@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CareConnect | Book Appointment</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>CareConnect</h1>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="doctors.html">Doctors</a>
+
+        <a href="appointment.html">Appointment</a>
+
+        <a href="dashboard.html">Dashboard</a>
+
+        <a href="login.html">Login</a>
+
+    </nav>
+
+</header>
+
+
+<section>
+
+    <h2>Book Your Appointment</h2>
+
+    <p>Please enter your details to schedule an appointment.</p>
+
+
+    <form id="appointmentForm">
+
+        <label>Patient Name</label>
+
+        <br>
+
+        <input
+            type="text"
+            id="patientName"
+            placeholder="Enter your name"
+            required
+        >
+
+        <br><br>
+
+
+        <label>Email Address</label>
+
+        <br>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+        >
+
+        <br><br>
+
+
+        <label>Select Doctor</label>
+
+        <br>
+
+        <select id="doctor" required>
+
+            <option value="">Select Doctor</option>
+
+            <option>
+                Dr. Rahul Sharma - Cardiologist
+            </option>
+
+            <option>
+                Dr. Priya Mehta - Dermatologist
+            </option>
+
+            <option>
+                Dr. Amit Patel - General Physician
+            </option>
+
+            <option>
+                Dr. Neha Verma - Pediatrician
+            </option>
+
+        </select>
+
+        <br><br>
+
+
+        <label>Appointment Date</label>
+
+        <br>
+
+        <input
+            type="date"
+            id="date"
+            required
+        >
+
+        <br><br>
+
+
+        <label>Appointment Time</label>
+
+        <br>
+
+        <select id="time" required>
+
+            <option value="">Select Time</option>
+
+            <option>10:00 AM</option>
+
+            <option>11:00 AM</option>
+
+            <option>12:00 PM</option>
+
+            <option>02:00 PM</option>
+
+            <option>03:00 PM</option>
+
+            <option>04:00 PM</option>
+
+        </select>
+
+        <br><br>
+
+
+        <label>Reason for Visit</label>
+
+        <br>
+
+        <textarea
+            id="reason"
+            placeholder="Enter reason for appointment"
+            rows="5"
+        ></textarea>
+
+        <br><br>
+
+
+        <button type="submit">
+
+            Confirm Appointment
+
+        </button>
+
+    </form>
+
+
+    <div id="confirmation"></div>
+
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 CareConnect - Doctor Appointment System
+    </p>
+
+</footer>
+
+
+<script src="js/appointment.js"></script>
+
+</body>
+
+</html>
