@@ -4,7 +4,6 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>CareConnect | Patient Dashboard</title>
@@ -22,13 +21,9 @@
     <nav>
 
         <a href="index.html">Home</a>
-
         <a href="doctors.html">Doctors</a>
-
         <a href="appointment.html">Appointment</a>
-
         <a href="dashboard.html">Dashboard</a>
-
         <a href="login.html">Login</a>
 
     </nav>
@@ -42,38 +37,115 @@
 
     <p>Welcome to your CareConnect dashboard.</p>
 
+    <br>
+
+
+    <!-- Statistics -->
+
+    <div>
+
+        <h3>📅</h3>
+
+        <h2 id="appointmentCount">0</h2>
+
+        <p>Total Appointments</p>
+
+    </div>
+
+
+    <div>
+
+        <h3>👨‍⚕️</h3>
+
+        <h2>4</h2>
+
+        <p>Available Doctors</p>
+
+    </div>
+
+
+    <div>
+
+        <h3>❤️</h3>
+
+        <h2>24/7</h2>
+
+        <p>Healthcare Support</p>
+
+    </div>
+
+
+    <br><br>
+
+
+    <!-- Patient Profile -->
 
     <div>
 
         <h3>👤 Patient Profile</h3>
 
-        <p>Name: <span id="patientName">Not Available</span></p>
+        <br>
 
-        <p>Email: <span id="patientEmail">Not Available</span></p>
+        <p>
+            <strong>Name:</strong>
+            <span id="patientName">Not Available</span>
+        </p>
+
+        <p>
+            <strong>Email:</strong>
+            <span id="patientEmail">Not Available</span>
+        </p>
+
+        <p>
+            <strong>Phone:</strong>
+            <span id="patientPhone">Not Available</span>
+        </p>
 
     </div>
 
+
+    <!-- Appointment -->
 
     <div>
 
         <h3>📅 My Appointment</h3>
 
-        <p>Doctor: <span id="doctor">No appointment</span></p>
+        <br>
 
-        <p>Date: <span id="date">-</span></p>
+        <p>
+            <strong>Doctor:</strong>
+            <span id="doctor">No appointment</span>
+        </p>
 
-        <p>Time: <span id="time">-</span></p>
+        <p>
+            <strong>Date:</strong>
+            <span id="date">-</span>
+        </p>
 
-        <p>Reason: <span id="reason">-</span></p>
+        <p>
+            <strong>Time:</strong>
+            <span id="time">-</span>
+        </p>
+
+        <p>
+            <strong>Reason:</strong>
+            <span id="reason">-</span>
+        </p>
+
+        <br>
+
+        <button id="cancelAppointment">
+            Cancel Appointment
+        </button>
 
     </div>
 
 
-    <br>
+    <br><br>
 
 
     <a href="appointment.html">
-        Book New Appointment
+        📅 Book New Appointment
     </a>
 
 </section>
