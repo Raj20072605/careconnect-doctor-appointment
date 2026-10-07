@@ -36,22 +36,27 @@ if (appointmentData) {
         appointment.time;
 
     document.getElementById("reason").textContent =
-        appointment.reason;
+        appointment.reason || "General consultation";
 
-    document.getElementById("appointmentCount").textContent = "1";
+    document.getElementById("appointmentCount").textContent =
+        "1";
 
 } else {
 
     document.getElementById("doctor").textContent =
         "No appointment";
 
-    document.getElementById("date").textContent = "-";
+    document.getElementById("date").textContent =
+        "-";
 
-    document.getElementById("time").textContent = "-";
+    document.getElementById("time").textContent =
+        "-";
 
-    document.getElementById("reason").textContent = "-";
+    document.getElementById("reason").textContent =
+        "-";
 
-    document.getElementById("appointmentCount").textContent = "0";
+    document.getElementById("appointmentCount").textContent =
+        "0";
 
 }
 
@@ -63,14 +68,11 @@ const cancelButton =
 
 cancelButton.addEventListener("click", function() {
 
-    const appointment =
-        localStorage.getItem("appointment");
-
-    if (appointment) {
+    if (localStorage.getItem("appointment")) {
 
         localStorage.removeItem("appointment");
 
-        alert("Appointment cancelled successfully!");
+        alert("✅ Appointment cancelled successfully!");
 
         location.reload();
 
@@ -81,3 +83,21 @@ cancelButton.addEventListener("click", function() {
     }
 
 });
+
+
+// Logout
+
+const logoutButton =
+    document.getElementById("logoutButton");
+
+logoutButton.addEventListener("click", function() {
+
+    localStorage.removeItem("loggedIn");
+
+    alert("✅ You have been logged out.");
+
+    window.location.href = "login.html";
+
+});
+   
+   
