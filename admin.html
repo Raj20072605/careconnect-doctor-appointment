@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CareConnect | Admin Panel</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>🏥 CareConnect Admin</h1>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+        <a href="doctors.html">Doctors</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="admin.html">Admin Panel</a>
+
+    </nav>
+
+</header>
+
+
+<section>
+
+    <h2>📊 Admin Dashboard</h2>
+
+    <p>Manage patients, doctors and appointments.</p>
+
+    <br>
+
+
+    <!-- Statistics -->
+
+    <div>
+
+        <h3>👥</h3>
+
+        <h2 id="patientCount">0</h2>
+
+        <p>Registered Patient</p>
+
+    </div>
+
+
+    <div>
+
+        <h3>👨‍⚕️</h3>
+
+        <h2>4</h2>
+
+        <p>Available Doctors</p>
+
+    </div>
+
+
+    <div>
+
+        <h3>📅</h3>
+
+        <h2 id="appointmentCount">0</h2>
+
+        <p>Appointments</p>
+
+    </div>
+
+
+    <br><br>
+
+
+    <!-- Patient Information -->
+
+    <div>
+
+        <h3>👤 Patient Information</h3>
+
+        <br>
+
+        <p>
+            <strong>Name:</strong>
+            <span id="patientName">No patient</span>
+        </p>
+
+        <p>
+            <strong>Email:</strong>
+            <span id="patientEmail">-</span>
+        </p>
+
+        <p>
+            <strong>Phone:</strong>
+            <span id="patientPhone">-</span>
+        </p>
+
+    </div>
+
+
+    <!-- Appointment Information -->
+
+    <div>
+
+        <h3>📅 Appointment Information</h3>
+
+        <br>
+
+        <p>
+            <strong>Doctor:</strong>
+            <span id="doctor">No appointment</span>
+        </p>
+
+        <p>
+            <strong>Date:</strong>
+            <span id="date">-</span>
+        </p>
+
+        <p>
+            <strong>Time:</strong>
+            <span id="time">-</span>
+        </p>
+
+        <p>
+            <strong>Reason:</strong>
+            <span id="reason">-</span>
+        </p>
+
+        <br>
+
+        <button id="adminCancel">
+            ❌ Cancel Appointment
+        </button>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 CareConnect - Smart Doctor Appointment System
+    </p>
+
+    <p>
+        Admin Management Panel
+    </p>
+
+</footer>
+
+
+<script src="js/admin.js"></script>
+
+</body>
+
+</html>
