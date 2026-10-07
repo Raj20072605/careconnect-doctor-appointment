@@ -8,119 +8,323 @@
 body {
     background: #f4f9fb;
     color: #222;
+    line-height: 1.6;
 }
+
+
+/* HEADER */
 
 header {
     background: #087f8c;
     color: white;
-    padding: 20px 8%;
+    padding: 18px 7%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
 }
 
 header h1 {
     font-size: 28px;
 }
 
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #dff7fa;
+    transform: translateY(-2px);
 }
+
+
+/* HERO */
 
 .hero {
     text-align: center;
-    padding: 100px 20px;
+    padding: 90px 20px;
     background: linear-gradient(135deg, #dff7fa, #ffffff);
 }
 
 .hero h2 {
     font-size: 48px;
     color: #075c66;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .hero p {
     font-size: 20px;
-    margin-bottom: 30px;
+    max-width: 700px;
+    margin: auto;
+    color: #555;
 }
 
-.hero a {
+
+/* BUTTONS */
+
+.hero a,
+section > a,
+button,
+.doctor-card a {
     display: inline-block;
     background: #087f8c;
     color: white;
-    padding: 14px 28px;
+    padding: 12px 22px;
+    border: none;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.3s;
 }
 
-.hero a:hover {
+.hero a:hover,
+section > a:hover,
+button:hover,
+.doctor-card a:hover {
     background: #055c65;
+    transform: translateY(-2px);
 }
+
+
+/* SECTIONS */
 
 section:not(.hero) {
-    padding: 60px 8%;
+    padding: 55px 7%;
     text-align: center;
 }
 
 section h2 {
     color: #075c66;
     font-size: 32px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
+
+section > p {
+    color: #555;
+}
+
+
+/* CARDS */
 
 section div {
     background: white;
     display: inline-block;
-    width: 28%;
-    min-width: 220px;
-    margin: 10px;
-    padding: 30px 20px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 27%;
+    min-width: 230px;
+    margin: 12px;
+    padding: 28px 20px;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+    vertical-align: top;
+    transition: 0.3s;
+}
+
+section div:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.13);
+}
+
+section div h2 {
+    font-size: 30px;
 }
 
 section div h3 {
     color: #087f8c;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
+
+
+/* DOCTOR CARDS */
+
+.doctor-card {
+    width: 270px;
+}
+
+.doctor-name {
+    color: #075c66;
+}
+
+.doctor-specialty {
+    color: #087f8c;
+    font-weight: bold;
+}
+
+
+/* SEARCH AND FILTER */
+
+#doctorSearch,
+#specialtyFilter {
+    width: 280px;
+    max-width: 90%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+#doctorSearch:focus,
+#specialtyFilter:focus {
+    border-color: #087f8c;
+    box-shadow: 0 0 5px rgba(8,127,140,0.3);
+}
+
+
+/* FORMS */
+
+form {
+    background: white;
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+form label {
+    font-weight: bold;
+    color: #075c66;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 13px;
+    margin-top: 7px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #087f8c;
+    box-shadow: 0 0 5px rgba(8,127,140,0.2);
+}
+
+form button {
+    width: 100%;
+    margin: 10px 0 0;
+}
+
+
+/* CONFIRMATION */
+
+#confirmation {
+    max-width: 600px;
+    margin: 25px auto;
+}
+
+#confirmation div {
+    width: 100%;
+    margin: 0;
+    border-left: 5px solid #087f8c;
+}
+
+#confirmation h2 {
+    color: #087f8c;
+}
+
+
+/* LOGIN / REGISTER MESSAGE */
+
+#loginMessage,
+#registerMessage {
+    font-weight: bold;
+    margin: 15px;
+}
+
+
+/* DASHBOARD */
+
+#cancelAppointment {
+    background: #c0392b;
+}
+
+#cancelAppointment:hover {
+    background: #922b21;
+}
+
+#logoutButton {
+    background: #555;
+}
+
+#logoutButton:hover {
+    background: #333;
+}
+
+
+/* FOOTER */
 
 footer {
     background: #075c66;
     color: white;
     text-align: center;
-    padding: 25px;
+    padding: 28px 15px;
     margin-top: 30px;
 }
 
-@media (max-width: 700px) {
+footer p {
+    margin: 5px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
 
     header {
         flex-direction: column;
         gap: 15px;
+        text-align: center;
     }
 
     nav {
-        margin-top: 10px;
+        justify-content: center;
     }
 
-    nav a {
-        display: inline-block;
-        margin: 5px;
+    .hero {
+        padding: 65px 15px;
     }
 
     .hero h2 {
         font-size: 35px;
     }
 
+    .hero p {
+        font-size: 17px;
+    }
+
     section div {
         width: 90%;
+        max-width: 400px;
     }
+
+    form {
+        width: 95%;
+        padding: 25px;
+    }
+
+    #doctorSearch,
+    #specialtyFilter {
+        width: 90%;
+    }
+
 }
+
+    
