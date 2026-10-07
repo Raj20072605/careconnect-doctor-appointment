@@ -1,9 +1,30 @@
 const form = document.getElementById("appointmentForm");
 const confirmation = document.getElementById("confirmation");
 
+
+// Load registered user
+
+const savedUser = localStorage.getItem("user");
+
+if (savedUser) {
+
+    const user = JSON.parse(savedUser);
+
+    document.getElementById("patientName").value =
+        user.name;
+
+    document.getElementById("email").value =
+        user.email;
+
+}
+
+
+// Submit appointment
+
 form.addEventListener("submit", function(event) {
 
     event.preventDefault();
+
 
     const patientName =
         document.getElementById("patientName").value;
@@ -44,41 +65,72 @@ form.addEventListener("submit", function(event) {
 
     confirmation.innerHTML = `
 
-        <h2>✅ Appointment Confirmed!</h2>
+        <div>
 
-        <p>
-            <strong>Patient:</strong>
-            ${patientName}
-        </p>
+            <h2>🎉 Appointment Confirmed!</h2>
 
-        <p>
-            <strong>Doctor:</strong>
-            ${doctor}
-        </p>
+            <p>
+                Your appointment has been booked successfully.
+            </p>
 
-        <p>
-            <strong>Date:</strong>
-            ${date}
-        </p>
+            <hr>
 
-        <p>
-            <strong>Time:</strong>
-            ${time}
-        </p>
+            <p>
+                <strong>Patient:</strong>
+                ${patientName}
+            </p>
 
-        <p>
-            <strong>Reason:</strong>
-            ${reason}
-        </p>
+            <p>
+                <strong>Doctor:</strong>
+                ${doctor}
+            </p>
 
-        <p>
-            Your appointment has been saved successfully.
-        </p>
+            <p>
+                <strong>Date:</strong>
+                ${date}
+            </p>
+
+            <p>
+                <strong>Time:</strong>
+                ${time}
+            </p>
+
+            <p>
+                <strong>Reason:</strong>
+                ${reason || "General consultation"}
+            </p>
+
+            <br>
+
+            <a href="dashboard.html">
+                View My Dashboard
+            </a>
+
+        </div>
 
     `;
+
 
     confirmation.style.display = "block";
 
     form.reset();
 
+
+    // Restore user details after reset
+
+    if (savedUser) {
+
+        const user = JSON.parse(savedUser);
+
+        document.getElementById("patientName").value =
+            user.name;
+
+        document.getElementById("email").value =
+            user.email;
+
+    }
+
 });
+    
+
+   
