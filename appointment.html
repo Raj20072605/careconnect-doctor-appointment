@@ -4,7 +4,6 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>CareConnect | Book Appointment</title>
@@ -22,13 +21,9 @@
     <nav>
 
         <a href="index.html">Home</a>
-
         <a href="doctors.html">Doctors</a>
-
         <a href="appointment.html">Appointment</a>
-
         <a href="dashboard.html">Dashboard</a>
-
         <a href="login.html">Login</a>
 
     </nav>
@@ -38,14 +33,18 @@
 
 <section>
 
-    <h2>Book Your Appointment</h2>
+    <h2>📅 Book Your Appointment</h2>
 
-    <p>Please enter your details to schedule an appointment.</p>
+    <p>
+        Schedule an appointment with your preferred doctor.
+    </p>
+
+    <br>
 
 
     <form id="appointmentForm">
 
-        <label>Patient Name</label>
+        <label>👤 Patient Name</label>
 
         <br>
 
@@ -59,7 +58,7 @@
         <br><br>
 
 
-        <label>Email Address</label>
+        <label>📧 Email Address</label>
 
         <br>
 
@@ -73,13 +72,15 @@
         <br><br>
 
 
-        <label>Select Doctor</label>
+        <label>🩺 Select Doctor</label>
 
         <br>
 
         <select id="doctor" required>
 
-            <option value="">Select Doctor</option>
+            <option value="">
+                Select Doctor
+            </option>
 
             <option>
                 Dr. Rahul Sharma - Cardiologist
@@ -102,7 +103,7 @@
         <br><br>
 
 
-        <label>Appointment Date</label>
+        <label>📅 Appointment Date</label>
 
         <br>
 
@@ -115,24 +116,21 @@
         <br><br>
 
 
-        <label>Appointment Time</label>
+        <label>⏰ Appointment Time</label>
 
         <br>
 
         <select id="time" required>
 
-            <option value="">Select Time</option>
+            <option value="">
+                Select Time
+            </option>
 
             <option>10:00 AM</option>
-
             <option>11:00 AM</option>
-
             <option>12:00 PM</option>
-
             <option>02:00 PM</option>
-
             <option>03:00 PM</option>
-
             <option>04:00 PM</option>
 
         </select>
@@ -140,13 +138,13 @@
         <br><br>
 
 
-        <label>Reason for Visit</label>
+        <label>📝 Reason for Visit</label>
 
         <br>
 
         <textarea
             id="reason"
-            placeholder="Enter reason for appointment"
+            placeholder="Describe your reason for visiting..."
             rows="5"
         ></textarea>
 
@@ -154,9 +152,7 @@
 
 
         <button type="submit">
-
-            Confirm Appointment
-
+            ✅ Confirm Appointment
         </button>
 
     </form>
